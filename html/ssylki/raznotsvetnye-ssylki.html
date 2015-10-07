@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Разноцветные ссылки
+	</title>
+</head>
+<body>
+	<table bgcolor="#555" width="100%" cellpadding="10" color="white"><tr><td>
+		<!--
+			Установка атрибута bgcolor к тэгу div никакого эффекта не даёт.
+			Если установить его у body - не будет белой рамочки.
+			Приходится опять использовать таблицы.
+			Заодно делаем отступы вокруг текста.
+			Вообще для этого используется CSS-свойство padding, но по условию задачи CSS использовать нельзя.
+		-->
+		<a href="127.0.0.1"><font color="red">Ссылка 1</font></a>
+		<!--
+			Текст внутри тэга a нельзя выделить отступами - появятся пробелы
+		-->
+		<font color="white">|</font>
+		<a href="127.0.0.1"><font color="#5DC">Ссылка 2</font></a>
+		<font color="white">|</font>
+		<a href="127.0.0.1"><font color="yellow">Ссылка 3</font></a>
+	</td></tr></table>
+</body>
+</html>
