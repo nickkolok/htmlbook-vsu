@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Таблица с зеброй
+	</title>
+</head>
+<body>
+	<!--
+		Исходный код, предлагаемый на htmlbook, таков:
+		
+		  <table class="lux">
+		   <tr><th></th><th>2004</th><th>2005</th><th>2006</th></tr>
+		   <tr><td>Рубины</td><td>43</td><td>51</td><td>79</td></tr>
+		   <tr><td>Изумруды</td><td>28</td><td>34</td><td>48</td></tr>
+		   <tr><td>Сапфиры</td><td>29</td><td>57</td><td>36</td></tr>
+		   <tr><td>Аметисты</td><td>23</td><td>64</td><td>97</td></tr>
+		  </table>
+		
+		Вообще задание с htmlbook.ru требует написать CSS, не изменяя HTML.
+		Но у нас задание другое!
+  
+	-->
+	<table cellspacing="0" bordercolor="#a52a2a" border="1" rules="rows">
+		<!-- 
+			cellspacing="0" - убираем пустоту между ячейками
+			rules="rows" - границы проводим только между строками
+			bordercolor - установка цвета границы. Невалиден, но иначе никак (только CSS).
+		-->
+		<!--
+			Теперь задаём ширину колонок
+		-->
+		<col width="120"/>
+		<col width="60"/>
+		<col width="60"/>
+		<col width="60"/>
+		</colgroup>
+		<tr bgcolor="#a52a2a">
+			<!-- Цвет фона для строки таблицы установить можно, цвет текста - нельзя -->
+			<th><!--	Левая верхняя ячейка - пустая	--></th>
+			<th border="0"> <font color="white">2004</font> </th>
+			<th> <font color="white">2005</font> </th>
+			<th> <font color="white">2006</font> </th>
+		</tr>
+		<tr bgcolor="#fffff0">
+			<td> Рубины </td>
+			<!--
+				Выравнивание для каждой ячейки указываем отдельно.
+				Атрибут align у col и colgroup в Firefox и Chromium не работает.
+			-->
+			<td align="center">43</td>
+			<td align="center">51</td>
+			<td align="center">79</td>
+		</tr>
+		<tr bgcolor="#fff8dc">
+			<td>Изумруды</td>
+			<td align="center">28</td>
+			<td align="center">34</td>
+			<td align="center">48</td>
+		</tr>
+		<tr bgcolor="#fffff0">
+			<td>Сапфиры</td>
+			<td align="center">29</td>
+			<td align="center">57</td>
+			<td align="center">36</td>
+		</tr>
+		<tr bgcolor="#fff8dc">
+			<td>Аметисты</td>
+			<td align="center">23</td>
+			<td align="center">64</td>
+			<td align="center">97</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
