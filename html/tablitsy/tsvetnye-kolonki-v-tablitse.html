@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Камни
+	</title>
+</head>
+<body><font size="2">
+	<table border="1" cellspacing="0" bgcolor="#fffd7a">
+		<tr bgcolor="grey" align="left">
+			<!--
+				Фон для всей строки задать можно, а вот цвет текста - нельзя.
+				Придётся в каждую ячейку пихать font
+			-->
+			<th><font color="white">
+				Название
+			</font></th>
+			<th><font color="white">
+				Цвет
+			</font></th>
+			<th><font color="white">
+				Твердость по Моосу
+			</font></th>
+			<th><font color="white">
+				Формула
+			</font></th>
+		</tr>
+		<!--
+			Вообще указать цвет фона для колонки таблицы не удаётся.
+			Мы пойдём на хитрость: жёлтый указан цветом фона всей таблицы, фон верхней строки задан в тэге tr,
+			а для голубых ячеек придётся указывать отдельно.
+		-->
+		<tr>
+			<td bgcolor="#7cded5"> Алмаз </td>
+			<td> Белый </td>
+			<td bgcolor="#7cded5" align="center"> 10 </td>
+			<td> C </td>
+		</tr>
+		<tr>
+			<td bgcolor="#7cded5"> Рубин </td>
+			<td> Красный </td>
+			<td bgcolor="#7cded5" align="center"> 9  </td>
+			<td> Al<sub>2</sub>O<sub>3</sub> </td>
+		</tr>
+		<tr>
+			<td bgcolor="#7cded5"> Аметист </td>
+			<td> Голубой </td>
+			<td bgcolor="#7cded5" align="center"> 7  </td>
+			<td> SiO<sub>2</sub> </td>
+		</tr>
+		<tr>
+			<td bgcolor="#7cded5"> Изумруд </td>
+			<td> Зеленый </td>
+			<td bgcolor="#7cded5" align="center"> 8  </td>
+			<td> Be<sub>3</sub>Al<sub>2</sub>(SiO<sub>3</sub>)<sub>6</sub> </td>
+		</tr>
+		<tr>
+			<td bgcolor="#7cded5"> Сапфир </td>
+			<td> Голубой </td>
+			<td bgcolor="#7cded5" align="center"> 9  </td>
+			<td> Al<sub>2</sub>O<sub>3</sub> </td>
+		</tr>
+	</table>
+</font></body>
+</html>
