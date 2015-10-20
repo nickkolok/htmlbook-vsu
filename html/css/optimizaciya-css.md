@@ -38,7 +38,9 @@ a:active {
   height: 17px;
 }
 ```
-1. Группируем `.pole` и `.pole2`
+
+1) Группируем `.pole` и `.pole2`
+
 ```
 a:link {
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -77,7 +79,9 @@ a:active {
 }
 
 ```
-2. Видим, что от `.pole2` ничего не остаётся. Убираем:
+
+2) Видим, что от `.pole2` ничего не остаётся. Убираем:
+
 ```
 a:link {
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -114,8 +118,10 @@ a:active {
 }
 
 ```
-3. Всякая `a `либо `:link`, либо `:visited`.
+
+3) Всякая `a `либо `:link`, либо `:visited`.
 Общее этих двух селекторов приписываем просто `a`.
+
 ```
 a {
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -146,7 +152,9 @@ a:active {
 }
 
 ```
-4. Наконец, убираем из `a:hover` и `a:active` то, что и так есть в `a`.
+
+4) Наконец, убираем из `a:hover` и `a:active` то, что и так есть в `a`.
+
 ```
 a {
   font-family: Verdana, Arial, Helvetica, sans-serif;
