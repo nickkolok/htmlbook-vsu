@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Чередующиеся квадраты
+	</title>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<style>
+		div {
+			width: 70px;
+			height: 70px;
+			display: inline-block; /* Либо через float*/
+			margin-right: 5px;
+			background: #009abf; /* Потом перекроется */
+		}
+		div:nth-child(odd) {
+			background: black;
+		}
+		div:hover {
+			background: #ff9f19;
+		}
+		/* А если  div:hover и div:nth-child помеянть местами, то чёрные не будут выделяться. Однако, порядок важен! */
+	</style>
+</body>
+</html>
