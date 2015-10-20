@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Квадратный корень
+	</title>
+</head>
+<body>
+	<span class="formula">
+		<span class="sqrt"></span><span>81</span> = ?
+	</span>
+	<style>
+		.formula {
+			font: italic 36px "sans";
+		}
+		.sqrt:before {
+			content: '√';
+			font-size: 1.1em;
+			vertical-align:top; /* Можно и без него, тогда другое значение top */
+			position: relative;
+			top:-8px;  /* Подгоняется. По-хорошему, надо явно указывать шрифт. Лучше всего - подгружаемый с сервера. */
+		}
+		.sqrt + * { /* Соседний элемент. Иначе черта будет над знаком корня. Умельцы как-то её убирают, но это напоминает хак */
+			border-top: 2px solid #007;
+		}
+		
+	</style>
+</body>
+</html>
