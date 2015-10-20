@@ -1,0 +1,4 @@
+#!/bin/bash
+cp blank.html $1.html
+firefox $1.html
+geany $1.html
