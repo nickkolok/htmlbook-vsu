@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+	В комментариях оставляю оригинальный код.
+	Во второй закавыченной строке DOCTYPE адрес должен быть абсолютным
+-->
+<!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "/TR/html4/strict.dtd">
+-->
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--
+	Добавляем title.
+	Без него валидатор невнятно ругается на "незавершённый head".
+  -->
+  <title>
+    Lorem ipsum
+  </title>
+ </head>
+ <body>
+  <!--
+	В двух именах атрибутов прощуена вторая l,
+	border используется дважды (браузер, вероятно, учтёт второе значение).
+  -->
+  <table cellpadding="0" cellspacing="0" border="2">  
+  <!--
+  <table border="0" celpadding="0" celspacing="0" border="2">
+  -->
+   <tr>
+    <td valign="top">Ut aliquip ex ea commodo.</td>
+    <td valign="top">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+   </tr>
+   <!--
+	Просто ячеки, без строки, браузер, вероятно, отобразит, но валидатор ругается
+   -->
+   <tr>
+    <!--
+		В значении botom пропущена вторая t,
+		colspan, судя по количеству ячеек в другой строке, лишний.
+	-->
+    <td valign="bottom">Lobortis nisl.</td>
+    <!--
+    <td valign="botom" colspan="2">Lobortis nisl.</td>
+    -->
+    <td valign="top">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+   </tr>
+  </table>
+ </body>
+</html>
