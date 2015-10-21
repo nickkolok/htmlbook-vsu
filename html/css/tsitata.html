@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Цитата
+	</title>
+</head>
+<body>
+	<blockquote>
+		<p>
+			Не ошибается лишь тот, кто ничего не делает!
+			Не бойтесь ошибаться&nbsp;— бойтесь повторять ошибки.
+		</p>
+		<p>
+			Теодор Рузвельт
+		</p>
+	</blockquote>
+	<!--
+		Растягивая страницу, можно убедиться, что оно условно-адаптивно
+	-->
+	<style>
+		blockquote::after, blockquote::before {
+			position: relative;
+			font-size: 1.5em;
+			color: #800;
+			font-weight: bold;
+		}
+		blockquote:before {
+			content: '«';
+			float: left;
+			top: 0.2em;
+		}
+		blockquote:after {
+			content: '»';
+			float: right;
+			bottom: 1.2em;
+		}
+		blockquote p { /* Отступ для абзацев внутри цитаты */
+			margin: 1em 3em;
+		}
+	</style>
+</body>
+</html>
