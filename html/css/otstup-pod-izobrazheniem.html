@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Отступ под изображением
+	</title>
+</head>
+<body>
+	<!-- Откуда они взяли эту несчастную сову, науке неизвестно. Заменил на пингвина -->
+	<div id="div0"><img src="bird.jpg" alt=""></div>
+	<div id="div1"><img src="bird.jpg" alt=""></div>
+	<div id="div2"><img src="bird.jpg" alt=""></div>
+	<div id="div3"><img src="bird.jpg" alt=""></div>
+	<div id="div4"><img src="bird.jpg" alt=""></div>
+	<div id="div5"><img src="bird.jpg" alt=""></div>
+	<style>
+		body {
+			background: #333;
+		}
+		div {
+			border: 2px solid #28a028;
+			background: #fff;
+			position: absolute;
+			left: 200px;
+		}
+		#div0 {
+			top: 50px;
+		}
+		
+		/* Способ первый - в лоб*/
+		#div1 {
+			top: 250px; /* Это просто картинки друг под дружкой располагаем, к делу отношения не имеет */
+			width: 128px; /* Просто жёстко задаём размеры div */
+			height: 131px;
+		}
+		
+		/* Способ второй  -  магический*/
+		#div2 {
+			top: 450px;
+		}
+		#div2 > img {
+			float: left;
+		}
+		
+		/* Способ третий  -  тоже магический*/
+		#div3 {
+			top: 650px;
+		}
+		#div3 > img {
+			display: block;
+		}
+		/* Оба работают за счёт изменения блочности img - со строчного на блочный. float - неявно, display - явно */
+		
+		/* Способ четвёртый, идеологически правильный */
+		#div4 {
+			top: 850px;
+			line-height: 0; /* Подавляем источник отступа - пустую строку якобы текста, обнулением его высоты */
+		}
+		
+		/* Способ пятый, тоже идеологически правильный */
+		#div5 {
+			top: 1050px;
+			font-size: 0; /* Подавляем источник отступа - пустую строку якобы текста, обнулением размера шрифта */
+		}
+		
+		body {
+			height:1250px; /* Просто чтобы нижнюю границу последней картинки лучше было видно */
+		}
+		
+	</style>
+</body>
+</html>
