@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Рамка
+	</title>
+</head>
+<body>
+	<!-- == Первый способ == -->
+	<div class="target top1">
+		<div class="inner1 middle1">
+		</div>
+		<div class="inner1 bottom1">
+		</div>
+	</div>
+
+	<hr/>
+	<!-- == Второй способ == -->
+	<div class="target top2">
+	</div>
+
+	<hr/>
+	<!-- == Третий способ == -->
+	<div class="target top3">
+	</div>
+	
+	<hr/>
+	<style>
+	hr { /* Разделитель вариантов */
+		margin: 30px;
+	}	
+		
+	.target { /* Общий класс для целевых блоков */
+		height: 200px; /* Задаём произвольно */
+		width: 480px;
+		background-color: #60b886;
+	}
+	/* == Первый способ == */
+	/* Просто три div */
+	.top1 {
+		position: relative;
+	}
+	.top1 > .inner1 {
+		position: absolute; /* Относительно родителя */
+		width: 100%;
+		height: 100%;
+	}
+	.middle1 {
+		z-index:-1;
+		background: #90CDAF;
+		top: 5px;
+		left: 5px;
+	}
+	.bottom1 {
+		z-index:-2;
+		background: #BFE3D1;
+		top: 10px;
+		left: 10px;
+	}
+
+	/* == Второй способ == */
+	/* Свойство box-shadow */
+	.top2 {
+		box-shadow: 5px 5px 0 #90CDAF, 10px 10px 0 #BFE3D1;
+	}
+	
+	/* == Третий способ == */
+	/* Псевдоэлементы before и after */
+	.top3 {
+		position: relative;
+	}
+	.top3::after, .top3::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+	}
+	.top3::after {
+		left: 5px;
+		top: 5px;
+		background-color: #90CDAF;
+	}
+	.top3::before { /* Который раньше - тот нижний */
+		left: 10px;
+		top: 10px;
+		background-color: #BFE3D1;
+	}
+	
+	</style>
+</body>
+</html>
